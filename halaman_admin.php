@@ -1,4 +1,5 @@
 <?php
+session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $judul = $_POST["judul"];
     $konten = $_POST["konten"];
