@@ -1,8 +1,10 @@
 <?php
+
     $servername = "sql309.infinityfree.com"; // Ganti dengan nama server Anda
     $username = "if0_34779797"; // Ganti dengan username database Anda
     $password = "02FM1qW5Y1cxxt"; // Ganti dengan password database Anda
     $dbname = "if0_34779797_post"; // Ganti dengan nama database Anda
+    // Buat koneksi
 
 // Buat koneksi
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -14,6 +16,20 @@ if ($conn->connect_error) {
 // Query untuk mengambil data postingan dari database
 $sql = "SELECT * FROM postingan";
 $result = $conn->query($sql);
+$judul = ""; // Inisialisasi variabel $judul
+$konten = ""; // Inisialisasi variabel $konten
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Memeriksa apakah data formulir telah dikirim
+    if (isset($_POST["judul"]) && isset($_POST["konten"])) {
+        // Mengambil nilai dari formulir dan menetapkannya ke variabel
+        $judul = $_POST["judul"];
+        $konten = $_POST["konten"];
+        
+        // Lanjutkan dengan pemrosesan data yang diterima
+        // ...
+    }
+}
 
 // Ambil ID postingan dari parameter URL
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {
@@ -306,8 +322,10 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
                                 Daftar Postingan
                             </button>
                         </a>
-                            <h1><?php echo $judul; ?></h1>
-                            <p><?php echo $konten; ?></p>
+<h1><?php echo $judul
+?></h1>
+<p><?php echo $konten
+?></p>
 
                             <ul> <?php
         if ($result->num_rows > 0) {
@@ -336,11 +354,11 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
                             </a>
                         </div>
                     <p>Nama Saya Bima Adhi Pratama Kharis</p>
-                <div>
-
+                
         </div>
     </body>
-</html> <?php
+</html>
+<?php
 // Tutup koneksi ke database
 $conn->close();
 ?>
