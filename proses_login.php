@@ -3,12 +3,12 @@ session_start();
 
 $list_user = [
     [
-        'username' => 'palapa',
-        'password' => 'malesi'
+        'username' => 'mister',
+        'password' => 'program'
     ],
     [
-        'username' => 'admin',
-        'password' => 'admin'
+        'username' => 'bima',
+        'password' => 'tamvan'
     ]
 ];
 
@@ -37,9 +37,11 @@ foreach ($list_user as $key => $registered_user) {
         } else {
             $_SESSION['error'] = 'Password anda salah';
             $not_found = true;
+            header("Location: index.php");
         }
     } else {
         $_SESSION['error'] = 'Password anda salah';
+        header("Location: index.php");
     }
 }
 if ($not_found == true) {

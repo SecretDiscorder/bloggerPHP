@@ -4,11 +4,11 @@
     
         <title>Latihan Website</title>
         <link rel="stylesheet" href="style.css">
-<style>
+        <style>
             .Pengaturan_tengah {
                 background-image: url("background.jpg");
-                text-align: center;
-                 width: 100%;
+                width: 100%;
+                margin: 0px auto 0px auto;
                 margin-left: auto;
                 margin-right: auto;
             }
@@ -57,11 +57,10 @@
             }
 
             .card-view3 {
-                align: 0px auto 0px auto;
                 border-radius: 10px;
+                margin: 0px auto 0px auto;
                 opacity: 1;
-                 width: 100%;
-                text-align: center;
+                width: 100%;
                 background-color: gray;
             }
 
@@ -99,7 +98,36 @@
             .name {
                 margin-bottom: 1rem;
             }
+#btn{
+	width: 99%;
+	padding: 3%;
+	margin-bottom: 8%;
+	background: cyan;
+	font-family: 'Open Sans', sans-serif;
+	color: #ECECEC;
+	box-shadow: inset 0px 0px 10px #666464;
+	-webkit-text-shadow: 0px 0px 3px #000;
+	-moz-text-shadow: 0px 0px 3px #000;
+	-o-text-shadow: 0px 0px 3px #000;
+	-ms-text-shadow: 0px 0px 3px #000;
+	font-size: 20px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	font-weight:500;
+	border-radius: 5px;
+	transition: 0.5s;
+	-webkit-appearance:none;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+}
 
+#btn:hover{
+	background: cyan;
+	color:#fff;
+}
             .name h2 {
                 font-size: 1.3rem;
             }
@@ -114,23 +142,22 @@
                 margin-bottom: 1rem;
             }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  align-items: center;
-  align: 0px auto 0px auto;
-  justify-content: center;
- width: 100%;
+            body {
+                font-family: 'Poppins', sans-serif;
+                margin: 0;
+                width: 100%;
+                background-color: #ADE5F9;
+                background-position: fixed;
+                background-height: auto;
+                background-repeat: no-repeat;
+            }
 
-  background-color: #ADE5F9;
-	background-position: fixed;
-	background-height: auto;
-	background-repeat: no-repeat;
-}
-@media (max-width: 1000px){
-  .body {
-     width: 100%;
-  }
-}
+            @media (max-width: 1000px) {
+                .body {
+                    width: 100%;
+                }
+            }
+
             .button {
                 border-radius: 30%;
                 background-color: rgba(255, 255, 255, .5);
@@ -145,19 +172,17 @@ body {
                 position: absolute;
                 left: 0;
                 right: 0;
-                margin: 0 auto;
+                margin: 0;
                 padding: 2.5rem 2rem;
                 border-radius: 10px;
                 background-color: rgba(255, 255, 255, .5);
                 box-shadow: 0 0 30px rgba(0, 0, 0, .15);
-                margin: 1rem;
+                margin: 0px auto 0px auto;
                 position: relative;
                 transform-style: preserve-3d;
                 overflow: hidden;
-                align: 0px auto 0px auto;
                 border-radius: 30px;
                 opacity: 1;
-                text-align: center;
             }
 
             .card {
@@ -167,13 +192,11 @@ body {
                 height: auto;
                 width: 100%;
                 box-shadow: 0 0 30px rgba(0, 0, 0, .15);
-                margin: 1rem;
+                margin: 0px auto 0px auto;
                 position: relative;
                 transform-style: preserve-3d;
                 overflow: hidden;
-                align: 0px auto 0px auto;
                 opacity: 1;
-                text-align: center;
             }
         </style>
         <title>Belajar HTML Dasar | Jago Ngoding</title>
