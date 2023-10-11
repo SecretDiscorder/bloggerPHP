@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+if (!isset($_SESSION['status']) || $_SESSION['status'] !== "login") {
+    header("Location: index.php");
+    exit(); // Ensure no further code is executed
+}
+	
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $judul = $_POST["judul"];
     $konten = $_POST["konten"];
@@ -11,6 +17,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Buat koneksi
     $conn = new mysqli($servername, $username, $password, $dbname);
+    
+
 
     // Periksa koneksi
     if ($conn->connect_error) {
@@ -269,12 +277,6 @@ tinymce.init({
 
 </head>
 <body>
-	<?php 
-	session_start();
-	if($_SESSION['status']!="login"){
-		header("location:../index.php");
-	}
-	?>
 <div class="pengaturan_tengah" align="center">
 <div class="card">
 <div class="logo">

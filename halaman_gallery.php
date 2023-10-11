@@ -1,3 +1,10 @@
+	<?php 
+	session_start();
+if (!isset($_SESSION['status']) || $_SESSION['status'] !== "login") {
+    header("Location: index.php");
+    exit(); // Ensure no further code is executed
+}
+	?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -214,12 +221,7 @@
 	<title>Belajar HTML Dasar | Jago Ngoding</title>
 </head>
 <body>
-	<?php 
-	session_start();
-	if($_SESSION['status']!="login"){
-		header("location:../index.php?pesan=belum_login");
-	}
-	?>
+
 <div class="pengaturan_tengah" align="center">
 <div class="card">
 <div class="logo">
